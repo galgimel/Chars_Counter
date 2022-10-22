@@ -1,14 +1,14 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Scanner;
+import static org.example.CountChars.cash;
+import static org.example.CountChars.countChars;
+import static org.example.Print.printCharsCount;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        HashMap<Character, Integer> mapChars = new HashMap<>();
-        new CountChars().countChars(input, mapChars);
-        new Print().printCharsCount(mapChars);
+        System.out.println("Введите текст для подсчета повторяющихся символов.");
+        System.out.println("Для остановки введите с новой строки символ - \"&\"");
+        countChars();
+        printCharsCount(cash);
     }
 }
